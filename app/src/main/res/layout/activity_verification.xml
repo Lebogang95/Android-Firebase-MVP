@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin32dp"
+            android:layout_marginEnd="@dimen/margin32dp"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please Verify The Email Below"
+                android:layout_marginBottom="@dimen/margin32dp"
+                android:textColor="@color/textColorWhite"
+                android:fontFamily="@font/droid_sans_chinese"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/login_emailedit"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:inputType="textEmailAddress"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="@dimen/margin16dp"
+                android:textColor="@color/textColorWhite"
+                android:text="applordapp@gmail.com"
+                android:fontFamily="@font/droid_sans_chinese"
+                android:background="@drawable/edittext_background"
+                android:hint="Email"
+                android:paddingLeft="16dp"
+                android:enabled="false"
+                tools:ignore="RtlSymmetry" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/margin16dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_verify"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Verify"
+                    android:textColor="@color/textColorWhite"
+                    android:fontFamily="@font/droid_sans_chinese"
+                    android:background="@drawable/button_solid_blue"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin32dp"
+            android:layout_marginEnd="@dimen/margin32dp"
+            android:layout_marginBottom="@dimen/margin32dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_resendverification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin16dp"
+                android:text="Send Verification Link"
+                android:textColor="@color/textColorWhite"
+                android:fontFamily="@font/droid_sans_chinese"
+                android:background="@drawable/button_solid_blue"/>
+
+            <Button
+                android:id="@+id/button_signout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Out"
+                android:textColor="@color/textColorWhite"
+                android:fontFamily="@font/droid_sans_chinese"
+                android:background="@drawable/button_solid_blue"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="@dimen/margin32dp"
+            android:background="@color/textColorWhiteOpaque"
+            android:layout_above="@+id/linear_layout_login"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

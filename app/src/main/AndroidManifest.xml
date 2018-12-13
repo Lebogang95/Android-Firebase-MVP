@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="za.co.lbnkosi.firebase_login">
+
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/SplashTheme">
+        <activity android:name=".main.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".main.LoginActivity" android:theme="@style/AppTheme" android:label="" />
+        <activity android:name=".main.RegisterActivity" android:theme="@style/AppTheme" android:label=""/>
+        <activity android:name=".main.MainActivity" android:theme="@style/AppTheme" android:label=""/>
+        <activity android:name=".main.FingerprintActivity" android:theme="@style/AppTheme" android:label=""/>
+        <activity android:name=".main.VerificationActivity" android:theme="@style/AppTheme" android:label=""/>
+    </application>
+
+</manifest>

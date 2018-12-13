@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+ <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/background_image"
+ android:scaleType="centerCrop"/>
+
+    <View android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:alpha="0.9"/>
+
+    <android.support.v4.widget.NestedScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="@dimen/margin32dp"
+            android:layout_marginEnd="@dimen/margin32dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="fill_vertical"
+            android:layout_above="@+id/textview_register"
+            tools:context=".ui.login.registration.RegisterActivity"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:id="@+id/registration_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true"
+                    android:paddingTop="32dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Security"
+                        android:textColor="@color/textColorWhite"
+                        android:fontFamily="@font/droid_sans_chinese"
+                        android:layout_marginTop="@dimen/margin16dp"
+                        android:layout_marginBottom="@dimen/margin16dp"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <Switch
+                            android:id="@+id/simpleSwitch1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin16dp"
+                            android:text="Keep Me Signed In"
+                            android:gravity="left"
+                            android:textColor="@color/textColorWhite"
+                            android:textSize="@dimen/textSizeMedium"
+                            android:fontFamily="@font/droid_sans_chinese"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Keeps you signed into the app"
+                            android:textColor="@color/textColorWhite"
+                            android:fontFamily="@font/droid_sans_chinese"/>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/textColorWhiteOpaque"
+                            android:layout_marginTop="@dimen/margin32dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dp"
+                        android:orientation="vertical">
+
+                    <Switch
+                            android:id="@+id/simpleSwitch3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin16dp"
+                            android:text="Fingerprint Authenticaion"
+                            android:gravity="left"
+                            android:textColor="@color/textColorWhite"
+                            android:textSize="@dimen/textSizeMedium"
+                            android:fontFamily="@font/droid_sans_chinese"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Use a fingerprint instead of a password to sign in and authenticate."
+                            android:textColor="@color/textColorWhite"
+                            android:fontFamily="@font/droid_sans_chinese"/>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/textColorWhiteOpaque"
+                            android:layout_marginTop="@dimen/margin32dp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:orientation="vertical">
+
+                    <Button
+                            android:id="@+id/signOutButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="Sign out"
+                            android:layout_marginBottom="16dp"
+                            android:textColor="@color/textColorWhite"
+                            android:fontFamily="@font/droid_sans_chinese"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button_solid_blue"/>
+
+
+                    <Button
+                            android:id="@+id/deleteAccountButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="Delete Account"
+                            android:textColor="@color/textColorWhite"
+                            android:fontFamily="@font/droid_sans_chinese"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button_solid_blue"/>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+            android:id="@+id/textview_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin16dp"
+            android:layout_marginTop="@dimen/margin32dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:fontFamily="@font/droid_sans_chinese"
+            android:textSize="12sp"
+            android:layout_alignParentBottom="true"
+            android:text="Settings are updated in real time"
+            android:textColor="@color/textColorWhite"/>
+
+    <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+</RelativeLayout>
